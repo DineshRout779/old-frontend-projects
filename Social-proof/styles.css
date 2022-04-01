@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+body{
+  margin: 0;
+}
+
+body::before{
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 400px;
+  height: 200px;
+  clip-path: ellipse(100% 100% at 0% 0%);
+  background: linear-gradient(to bottom right, #ccffff 0%, #f3ecf3 100%);
+  z-index: -1;
+}
+
+.container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0px auto;
+}
+
+.intro {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto 20px;
+}
+
+h1 {
+  color: #061826;
+  text-align: center;
+  padding: 0 40px;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.intro-heading p {
+  color: #777;
+  text-align: center;
+  padding: 0 20px;
+}
+
+img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.rating {
+  width: 100%;
+}
+
+.item {
+  padding: 16px;
+  background-color: #e4e8f0;
+  margin: 20px auto;
+  width: 90%;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+  margin-bottom: 10px;
+}
+
+.stars i {
+  color: orange;
+}
+
+
+.feedback {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto 50px;
+}
+
+.feed {
+  width: 90%;
+  margin: 10px auto;
+  background-color: #061826;
+  padding: 16px 26px;
+  border-radius: 6px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.user .img {
+  width: 50px;
+}
+
+.user-data {
+  margin-left: 30px;
+}
+
+.user-data p {
+  color: #fff;
+  font-weight: bold;
+}
+
+.user-data p.auth {
+  color: #999;
+  margin-top: -12px;
+  font-weight: lighter;
+}
+
+.feed .msg {
+  color: white;
+}
+
+@media (min-width: 700px) {
+  .intro {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+  }
+  h1{
+    font-size: 50px;
+  }
+  .intro-heading {
+    width: 40%;
+  }
+  .rating {
+    width: 50%;
+  }
+  .feedback {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+  }
+  .item {
+    width: 100%;
+    flex-direction: row;
+  }
+  .stars{
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+  .item:nth-child(1) {
+    transform: translateX(-40px);
+  }
+  .item:nth-child(2) {
+    transform: translateX(-20px);
+  }
+  .feed {
+    width: 32%;
+  }
+  .feed:nth-child(2) {
+    transform: translateY(15px);
+  }
+  .feed:nth-child(3) {
+    transform: translateY(30px);
+  }
+}

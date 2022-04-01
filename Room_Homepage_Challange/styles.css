@@ -1,0 +1,262 @@
+:root {
+  --Dark-Gray: hsl(0, 0%, 63%);
+  --Black: hsl(0, 0%, 0%);
+  --White: hsl(0, 0%, 100%);
+  --Very-Dark-Gray: hsl(0, 0%, 27%);
+
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: "Spartan", sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: #000000;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+  margin-bottom: 0.5em;
+}
+
+img:not(.nb) {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+p {
+  color: rgb(105, 102, 102);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  grid-template-areas:
+    "hero hero hero hero shop shop shop "
+    "hero hero hero hero shop shop shop "
+    "featured-left featured-left about about about featured-right featured-right ";
+}
+
+.grid-item {
+  background: rgb(243, 107, 107);
+  width: 100%;
+  height: 100%;
+}
+
+.hero {
+  width: 100%;
+  background-color: #fff;
+  background: rgba(65, 52, 52, 0.507) no-repeat center center/cover;
+  /* background-image: url(./images/desktop-image-hero-1.jpg); */
+  grid-area: hero;
+  height: 100%;
+  position: relative;
+  transition: 1s;
+}
+
+.shop {
+  grid-area: shop;
+  padding: 5em 3em;
+}
+
+.featured-left {
+  grid-area: featured-left;
+}
+
+.about {
+  grid-area: about;
+  padding: 2em;
+}
+
+.featured-right {
+  grid-area: featured-right;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 2em;
+}
+
+.logo,
+nav a {
+  color: #ffffff;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 1.3em;
+}
+
+.menu {
+  display: none;
+}
+
+nav {
+  margin-left: 3em;
+}
+
+nav a {
+  margin-left: 1em;
+  font-weight: normal;
+}
+
+nav .close {
+  display: none;
+}
+
+.about,
+.shop {
+  background-color: #fff;
+}
+
+.shop p,
+.about p {
+  font-size: 12px;
+}
+
+.shop a {
+  margin-top: 2em;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  font-size: 12px;
+}
+
+.shop-item {
+  display: none;
+}
+
+.slider {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: -145px;
+}
+
+.about h1 {
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-bottom: 1em;
+}
+
+button {
+  background-color: #000;
+  padding: 1em 2.2em;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #222;
+}
+
+@media (max-width: 800px) {
+  header {
+    text-align: center;
+  }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "hero hero"
+      "shop shop"
+      "featured-left featured-right"
+      "about about";
+  }
+  .hero {
+    height: 50vh;
+  }
+  .about {
+    padding: 3em;
+  }
+  nav {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    transition: 0.5s ease;
+  }
+  nav a {
+    margin-left: 0;
+    margin-right: 0.5em;
+    color: #444;
+    padding: 0.5em;
+    font-weight: bold;
+  }
+  nav .close {
+    padding: 0 0.5em;
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    font-size: 2em;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30px;
+    height: 27px;
+    margin-left: auto;
+    cursor: pointer;
+  }
+  .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+  }
+  .slider {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+@media (max-width: 520px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "hero hero"
+      "shop shop"
+      "featured-left featured-left"
+      "about about"
+      "featured-right featured-right";
+  }
+  .hero {
+    height: 50vh;
+  }
+  .shop {
+    padding: 2.9em;
+  }
+  nav a {
+    font-size: 12px;
+  }
+}

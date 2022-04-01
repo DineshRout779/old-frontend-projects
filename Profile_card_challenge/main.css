@@ -1,0 +1,144 @@
+:root {
+  /* primary */
+  --Dark-cyan: hsl(185, 75%, 39%);
+  --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --Dark-grayish-blue: hsl(227, 10%, 46%);
+
+  /* neutral */
+  --Dark-gray: hsl(0, 0%, 59%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+body {
+  background: var(--Dark-cyan);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  line-height: 1.6;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+img {
+  width: 100%;
+  display: block;
+  height: 100%;
+}
+
+h3 {
+  color: var(--Very-dark-desaturated-blue);
+}
+
+p,
+span {
+  color: var(--Dark-grayish-blue);
+}
+
+span {
+  font-weight: 700;
+}
+
+p {
+  font-size: 14px;
+}
+
+.bg {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.bg-top {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: -50%;
+  left: -50%;
+}
+
+.bg-bottom {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  right: -50%;
+  bottom: -50%;
+}
+
+.card {
+  width: 85%;
+  max-width: 360px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 50px var(--Dark-grayish-blue);
+}
+
+.card-top {
+  /* height: 100px; */
+  overflow: hidden;
+}
+
+.card-user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-user-img {
+  position: relative;
+  top: -60px;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 5px solid #fff;
+}
+
+.card-user-info {
+  text-align: center;
+  position: relative;
+  top: -30px;
+}
+.card-user-info span {
+  margin-left: 5px;
+}
+
+.card-user-stats {
+  padding: 1.5em;
+  border-top: 2px solid rgb(243, 238, 238);
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card-col {
+  text-align: center;
+}
+
+.card-col h3 {
+  font-size: 18px;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  padding: 1em;
+  color: rgb(232, 240, 240);
+  font-size: 14px;
+}
+
+.attribution a {
+  font-weight: bold;
+}

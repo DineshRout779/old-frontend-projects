@@ -1,0 +1,154 @@
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --Soft-Magenta: hsl(300, 69%, 71%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--Violet) url(./images/bg-desktop.svg) no-repeat center
+    center/cover;
+  min-height: 100vh;
+  line-height: 1.6;
+  font-family: "Open Sans", sans-serif;
+  color: #ffffff;
+  /* font-size: 14px; */
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 1rem;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+header {
+  padding: 2rem 0;
+}
+
+.container {
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 200px;
+}
+
+section {
+  padding: 1.5rem 0;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero__img,
+.hero__content {
+  flex-basis: 50%;
+}
+
+.hero .hero__content h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.hero .hero__content p {
+  color: rgb(204, 193, 193);
+}
+
+.cta-btn {
+  margin-top: 1rem;
+  padding: 0.6rem 3rem;
+  background-color: #fff;
+  color: var(--Violet);
+  border-radius: 2rem;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.4s ease;
+}
+
+.cta-btn:hover {
+  background: var(--Soft-Magenta);
+  color: #fff;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+footer a .fa {
+  display: block;
+  padding: 0.5rem;
+  border: 2px solid #fff;
+  margin: 0 0.3rem;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+}
+
+footer a .fa-facebook {
+  padding: 0.5rem 0.65rem;
+}
+
+footer a .fa:hover {
+  color: var(--Soft-Magenta);
+  border-color: var(--Soft-Magenta);
+}
+
+@media (max-width: 700px) {
+  body {
+    background: var(--Violet);
+  }
+  body::before {
+    content: "";
+    width: 100%;
+    height: 60vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(./images/bg-mobile.svg) no-repeat center center/cover;
+    z-index: -1;
+  }
+  .logo {
+    width: 170px;
+  }
+  .hero {
+    flex-direction: column;
+    gap: 6rem;
+  }
+  .hero__img,
+  .hero__content {
+    flex-basis: 100%;
+  }
+  .hero__content {
+    text-align: center;
+  }
+  footer {
+    justify-content: center;
+  }
+}

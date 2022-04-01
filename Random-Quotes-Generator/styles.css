@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background: rgb(71, 219, 170);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s ease-in;
+}
+
+main{
+    color: white;
+    width: 90%;
+    margin: 100px auto;
+    max-width: 700px;
+}
+
+h1{ text-align: center; margin-bottom: 30px }
+
+.container{
+    padding: 50px ;
+    background-color: rgb(236, 32, 93);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 15px #858586;
+    transition: background-color 0.5s ease-in;
+}
+
+
+.quote__text{
+    font-size: 30px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.quote__text i{
+    position: absolute;
+    top: -20px;
+    left: 0;
+    font-size: 50px;
+}
+
+
+.quote__text p{
+    text-indent: 60px;
+    line-height: 1.5em;
+    text-align: justify;
+}
+
+.quote__author{
+    font-size: 22px;
+    align-self: flex-end;
+    color: rgb(255, 255, 255);
+}
+
+.actions{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+button{
+    padding: 10px 22px;
+    background-color: transparent;
+    /* border: 1px solid white; */
+    border-radius: 3px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color,box-shadow 0.5s ease-in-out;
+    color: white;
+    outline: none;
+}
+
+.tweet{
+    background-color: rgb(33, 160, 233);
+    border: 1px solid rgb(33, 160, 233);
+}
+
+.tweet:hover{
+    background-color: rgb(53, 86, 235);
+    box-shadow:  0px 0px 15px #858586;
+}
+
+.more{
+    background-color: rgb(236, 32, 93);
+    border: 1px solid rgb(236, 32, 93);
+}
+
+.more:hover{
+    background-color: rgb(190, 0, 57);
+    box-shadow:  0px 0px 15px #858586;
+}
+
+@media (max-width: 650px){
+    .quote__text{
+        font-size: 24px;
+    }
+    .quote__author{
+        font-size: 18px;
+    }
+    .quote__text i{
+        font-size: 30px;
+        top: -10px;
+    }
+    .quote__text p{
+    text-indent: 40px;
+    }
+}
+
